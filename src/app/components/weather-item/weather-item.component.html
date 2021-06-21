@@ -1,4 +1,17 @@
 <mat-card>
-    <mat-card-title>{{weather?.name}}</mat-card-title>
-    <mat-card-content>show details here</mat-card-content>
+    <mat-card-title>
+        <span class="city">  
+            {{weather?.name}}
+        </span> 
+    </mat-card-title>
+    <mat-card-content>
+       <span class="temp">
+        {{weather?.main?.temp}} &#8451;
+       </span> 
+        <span class="weather-type" *ngFor="let item of weather?.weather">
+            {{item?.main}}
+        </span>
+        <!-- {{weather?.weather[0]?.main}} -->
+    </mat-card-content>
 </mat-card>
+
