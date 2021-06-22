@@ -1,16 +1,22 @@
 <mat-card>
-  
+
     <mat-card-content>
-        <div class="city">  
+        <div class="city">
             {{weather?.name}}
-        </div> 
-       <span class="temp">
-        {{weather?.main?.temp}} &#8451;
-       </span> 
+        </div>
+        <span class="temp">
+            {{weather?.main?.temp}} &#8451;
+        </span>
         <span class="weather-type" *ngFor="let item of weather?.weather">
             {{item?.main}}
         </span>
-        <!-- {{weather?.weather[0]?.main}} -->
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                Sunrise: {{weather?.sys?.sunrise | timeTransform}}
+            </div>
+            <div class="col-md-6 col-sm-6">
+                Sunset: {{weather?.sys?.sunset | timeTransform}}
+            </div>
+        </div>
     </mat-card-content>
 </mat-card>
-

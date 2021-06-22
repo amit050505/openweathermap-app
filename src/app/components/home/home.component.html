@@ -1,6 +1,6 @@
-<div *ngFor="let w of weatherForCities?.list">
+<div >
     <div class="row all">
-        <div class="col-md-12">
+        <div class="col-md-4 col-sm-6" *ngFor="let w of weatherList">
             <app-weather-item [weather]="w" (click)="getWeatherDetails(w.id.toString())"></app-weather-item>
         </div>
     </div>

@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatCardModule} from '@angular/material/card';
 import { DateTransformPipe } from './date-transform.pipe';
+import { TimeTransformPipe } from './time-transform.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { DateTransformPipe } from './date-transform.pipe';
     HomeComponent,
     WeatherDetailsComponent,
     WeatherItemComponent,
-    DateTransformPipe
+    DateTransformPipe,
+    TimeTransformPipe
   ],
   imports: [
     BrowserModule,
