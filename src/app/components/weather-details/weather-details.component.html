@@ -1,1 +1,52 @@
-<p>weather-details works!</p>
+<div class=" row currentweather">
+    <div class="col-md-12">
+        <mat-card>
+            <mat-card-title>
+                <div style="font-weight: bold">Today</div>
+                <span class="city">
+                    {{weather?.name}}, {{weather?.sys?.country}} Weather Conditions
+                </span>
+            </mat-card-title>
+            <mat-card-content>
+                <span class="temp">
+                    {{weather?.main?.temp}} &#8451;
+                </span>
+                <span class="weather-type" *ngFor="let item of weather?.weather">
+                    {{item?.description}}
+                </span>
+
+                <!-- {{weather?.weather[0]?.main}} -->
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<div class="headingLabelForecast"> Forecast </div>
+<div class="row">
+    <div *ngFor="let f of forecast?.list" class="col-md-3 col-sm-4 forecast-item">
+        <mat-card>
+            <mat-card-title>
+                <div class="row" style="background-color: rgb(37, 37, 37);">
+                    <div class="col-md-6 col-sm-6 current-temp" style="font-size: 18px; color:white; text-shadow: 5px;">
+                        {{f?.dt_txt | dateTransform}}
+                    </div>
+                    <div class="col-md-4 col-sm-4 current-temp">
+                        {{f?.main?.temp}}&#8451;
+                    </div>
+                </div>
+            </mat-card-title>
+            <mat-card-content>
+
+                <span class="forecast-temp" *ngFor="let item of f?.weather">
+                    <b>High</b> {{f?.main?.temp_max}} &#8451;
+                </span>
+                <span class="forecast-temp">
+                    <b>Low</b> {{f?.main?.temp_min}} &#8451;
+                </span>
+                <div>
+                    <b> Sea level: </b> {{weather?.main?.sea_level}}
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

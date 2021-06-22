@@ -9,13 +9,15 @@ import { WeatherItemComponent } from './components/weather-item/weather-item.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatCardModule} from '@angular/material/card';
+import { DateTransformPipe } from './date-transform.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     WeatherDetailsComponent,
-    WeatherItemComponent
+    WeatherItemComponent,
+    DateTransformPipe
   ],
   imports: [
     BrowserModule,

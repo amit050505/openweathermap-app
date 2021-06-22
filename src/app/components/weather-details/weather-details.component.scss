@@ -1,0 +1,55 @@
+.forecast-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.headingLabelForecast {
+    margin-top: 20px;
+    font-size: 18px;
+}
+.current-temp {
+    color: #006f9e;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.weather-type {
+    color: grey;
+}
+.mat-card:hover {
+    cursor: auto;
+}
+
+.mat-card:hover {
+    font-weight: normal;
+    background-color: transparent;
+}
+
+
+.city {
+    color: #006f9e;
+    font-size: 14px;
+}
+.temp {
+    color: #006f9e;
+}
+.weather-type {
+    color: grey;
+}
+.currentweather {
+    margin-top: 20px;
+}
+.mat-card {
+    background-color: #ddd6fa;
+}
+
+.mat-card:hover {
+    background-color: #ddd6fa;
+}
+.currentweather .mat-card {
+    background-color: #ffdc57;
+    
+}
+.currentweather .mat-card:hover {
+    background-color: #ffdc57;
+}

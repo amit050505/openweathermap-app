@@ -1,3 +1,15 @@
-app-weather-item  {
-    padding: 10px;
+app-weather-item {
+    padding: 5px;
+}
+.all .mat-card:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.all .mat-card {
+    background-color: #ffdc57;
+}
+
+.all .mat-card:hover {
+    background-color: #ffdc57;
 }
